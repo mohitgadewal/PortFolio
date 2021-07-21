@@ -300,6 +300,9 @@ img{
 .skills__c{
   width: 75%;
 }
+.skills__arduino{
+  width: 75%;
+}
 
 .skills__img{
   border-radius: .5rem;
