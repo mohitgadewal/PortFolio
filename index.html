@@ -206,17 +206,16 @@
             <h2 class="section-title">Contact</h2>
 
             <div class="contact__container bd-grid">
-                <form action="https://formspree.io/f/xayadknp" method="POST" class="contact__">
-                    <label>Email:</label>
-                    <input type=" email" name="email" />
-                <label>Message:</label>
-                <input type="text" name="message" />
-                <button id="my-form-button">Submit</button>
-                <p id="my-form-status"></p>
-
+                <form class="contact__form" id="my-form" action="https://formspree.io/f/xayadknp" method="POST">
+                    <input type="mail" name="email" placeholder="Email" class="contact__input">
+                    <textarea name="message" id="" cols="0" rows="10" class="contact__input"></textarea>
+                    <button id="my-form-button" class="contact__button button">Submit</button>
+                    <p id="my-form-status"></p>
                 </form>
             </div>
         </section>
+    </main>
+
     </main>
 
     <!--===== FOOTER =====-->
@@ -252,18 +251,15 @@
                     'Accept': 'application/json'
                 }
             }).then(response => {
-                status.innerHTML = "Thanks for your submission!";
+                // status.innerHTML = 
+                alert("Thankyou for submission");
                 form.reset()
             }).catch(error => {
-                status.innerHTML = "Oops! There was a problem submitting your form"
+                // status.innerHTML =
+                alert("Oops! There was a problem submitting your form");
             });
         }
         form.addEventListener("submit", handleSubmit)
     </script>
-
-
-
-
 </body>
-
 </html>
